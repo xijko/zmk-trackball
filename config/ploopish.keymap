@@ -5,14 +5,16 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer { // Layer 0
+        default_layer {
             // -------------------------------------
             // |     1     |     2     |     3     |     4     |
             // |     A     |                       |     B     |
+
             bindings = <
-                &kp 1    &kp 2    &kp 3  &kp 4
-                &kp A    &kp B
+&kp NUMBER_2  &kp NUMBER_3
+&kp NUMBER_1  &kp NUMBER_4
+&kp A         &kp B
             >;
         };
     };
- };
+};
