@@ -34,8 +34,8 @@
         rows = <3>; // Length of the "row-gpios" array
         map = <
         //   Key 1 | Key 2 | Key 3 | Key 4
-             RC(0,0) RC(0,1)
-RC(1,0) RC(1,1)
+             RC(1,0) RC(0,0) RC(0,1) RC(1,1)
+
         //   Key LMB       |     Key RMB
             RC(2,0)                 RC(2,1)
         >;
