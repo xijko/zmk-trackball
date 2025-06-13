@@ -3,7 +3,7 @@
         group1 {
 pinmux = <&xiao_spi 9>,
 <&xiao_spi 10>,
-<&xiao_spi 8>
+<&xiao_spi 8>;
         };
     };
 };
