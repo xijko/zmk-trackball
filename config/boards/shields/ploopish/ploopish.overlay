@@ -29,6 +29,12 @@
     };
 };
 
+/ {
+    chosen {
+        zmk,kscan = &kscan0;
+    };
+};
+
 &sercom0 {
     status = "okay";
     compatible = "atmel,sam0-spi";
