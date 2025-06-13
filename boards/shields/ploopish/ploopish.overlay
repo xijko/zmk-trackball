@@ -44,7 +44,6 @@
 			pinmux = <PA5D_SERCOM0_PAD1>,
 				 <PA6D_SERCOM0_PAD2>,
 				 <PA7D_SERCOM0_PAD3>;
-            low-power-enable;
         };
     };
 };
