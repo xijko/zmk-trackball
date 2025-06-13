@@ -1,3 +1,0 @@
-# No whitespace after the comma or in your keyboard name!
-config SHIELD_MY_KEYBOARD
-    def_bool $(shields_list_contains,ploopish)
