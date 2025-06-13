@@ -35,11 +35,13 @@
     };
 };
 
-sercom0_default: pinctrl-0 {
+/ {
+    sercom0_default: sercom0_default {
         group1 {
-        pinmux = <0x00030025>, <0x00030026>, <0x00030027>;
+            pinmux = <0x00030025>, <0x00030026>, <0x00030027>;
         };
     };
+};
 
 &sercom0 {
     status = "okay";
