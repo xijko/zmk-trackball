@@ -21,4 +21,3 @@
 include:
   - board: seeeduino_xiao
     shield: ploopish
-    snippet: studio-rpc-usb-uart
