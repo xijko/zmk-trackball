@@ -1,11 +1,9 @@
-#include <dt-bindings/pinctrl/sam0.h>
-
 &pinctrl {
     sercom0_spi_default: sercom0_spi_default {
         group1 {
-            pinmux = <PINMUX_PA04D_SERCOM0_PAD0>,
-                     <PINMUX_PA05D_SERCOM0_PAD1>,
-                     <PINMUX_PA06D_SERCOM0_PAD2>;
+            pinmux = <0x00030004>,  /* PA04 - SERCOM0 PAD0 */
+                     <0x00030005>,  /* PA05 - SERCOM0 PAD1 */
+                     <0x00030006>;  /* PA06 - SERCOM0 PAD2 */
             bias-disable;
         };
     };
