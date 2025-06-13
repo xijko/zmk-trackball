@@ -54,13 +54,6 @@
 };
 
 / {
-	mouse_listener {
-		compatible = "zmk,input-listener";
-		device = <&mouse>;
-	};
-};
-
-/ {
     default_transform: keymap_transform0 {
         compatible = "zmk,matrix-transform";
         columns = <2>; // Length of the "col-gpios" array
