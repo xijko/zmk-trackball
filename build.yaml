@@ -22,9 +22,3 @@ include:
   - board: seeeduino_xiao
     shield: ploopish
     snippet: studio-rpc-usb-uart
-    
-on: [workflow_dispatch]
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
