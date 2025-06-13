@@ -4,13 +4,16 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: trentrand
       url-base: https://github.com/trentrand
+
   projects:
-  -  name: zmk
+    - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
+
     - name: zmk-pmw3360-driver
       remote: trentrand
       revision: main
+
   self:
     path: config
