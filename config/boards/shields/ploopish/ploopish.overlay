@@ -35,9 +35,7 @@
 
     sercom0_default: pinctrl-0 {
         group1 {
-            pinmux = <PA5D_SERCOM0_PAD1>,
-                     <PA6D_SERCOM0_PAD2>,
-                     <PA7D_SERCOM0_PAD3>;
+pinmux = <0x00030025>, <0x00030026>, <0x00030027>;
         };
     };
 
