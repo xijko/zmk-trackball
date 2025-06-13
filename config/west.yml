@@ -3,14 +3,15 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: trentrand
-      url-base: https://github.com/trentrand
+      url-base: https://github.com/ftc
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-pmw3360-driver
-      remote: trentrand
-      revision: main
+    - name: zmk
+      remote: ftc
+      revision: mouse-ftc
+      import: app/west.yml
   self:
     path: config
