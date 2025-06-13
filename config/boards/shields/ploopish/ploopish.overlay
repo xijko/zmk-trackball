@@ -1,4 +1,7 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your overlay
+#define PINMUX_PA04D_SERCOM0_PAD0 0x00030004
+#define PINMUX_PA05D_SERCOM0_PAD1 0x00030005
+#define PINMUX_PA06D_SERCOM0_PAD2 0x00030006
 
 / {
     physical_layout0: physical_layout_0 { // First physical layout, use different naming for other layouts
