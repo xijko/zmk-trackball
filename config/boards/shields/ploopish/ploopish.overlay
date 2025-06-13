@@ -35,15 +35,15 @@
     };
 };
 
+sercom0_default: pinctrl-0 {
+        group1 {
+        pinmux = <0x00030025>, <0x00030026>, <0x00030027>;
+        };
+    };
+
 &sercom0 {
     status = "okay";
     compatible = "atmel,sam0-spi";
-
-    sercom0_default: pinctrl-0 {
-        group1 {
-pinmux = <0x00030025>, <0x00030026>, <0x00030027>;
-        };
-    };
 
     pinctrl-0 = <&sercom0_default>;
     pinctrl-names = "default";
@@ -51,7 +51,7 @@ pinmux = <0x00030025>, <0x00030026>, <0x00030027>;
     cs-gpios = <&xiao_d 8 GPIO_ACTIVE_LOW>;  /* CS -> D8 */
 
     trackball: trackball@0 {
-        compatible = "pixart,PMW3610";
+        compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
         status = "okay";
