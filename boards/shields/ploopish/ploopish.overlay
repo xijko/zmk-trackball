@@ -1,4 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your overlay
+#include <dt-bindings/pinctrl/samd21-da1gXabcd-pinctrl.h>
+
 / {
     physical_layout0: physical_layout_0 { // First physical layout, use different naming for other layouts
         compatible = "zmk,physical-layout";
@@ -27,6 +29,15 @@
     };
 };
 
+{
+&sercom0_default: sercom0_spi_default {
+		group1 {
+			pinmux = <PA5D_SERCOM0_PAD1>,
+				 <PA6D_SERCOM0_PAD2>,
+				 <PA7D_SERCOM0_PAD3>;
+		};
+	};
+};
 &sercom0 {
     status = "okay";
     compatible = "atmel,sam0-spi";
