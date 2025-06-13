@@ -28,32 +28,14 @@
 };
 
 /* REMOVED: NRF-specific pinctrl block for Nordic chips */
-&pinctrl {
-    sercom0_default: sercom0_default {
-        group1 {
-            pinmux = <PINMUX_PA08D_SERCOM0_PAD0
-                      PINMUX_PA06D_SERCOM0_PAD2
-                      PINMUX_PA07D_SERCOM0_PAD3>;
-        };
-    };
-
-    sercom0_sleep: sercom0_sleep {
-        group1 {
-            pinmux = <PINMUX_PA08D_SERCOM0_PAD0
-                      PINMUX_PA06D_SERCOM0_PAD2
-                      PINMUX_PA07D_SERCOM0_PAD3>;
-            low-power-enable;
-        };
-    };
-};
-
 &sercom0 {
     status = "okay";
     compatible = "atmel,sam0-spi";
-    pinctrl-0 = <&sercom0_default>;
-    pinctrl-1 = <&sercom0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&xiao_d 8 GPIO_ACTIVE_LOW>;  /* Replace with correct CS pin */
+    cs-gpios = <&xiao_d 8 GPIO_ACTIVE_LOW>;  /* CS -> D8 */
+
+    pads = <0 0  /* PAD0: SCK  -> PA08 (D8) */
+            2 0  /* PAD2: MOSI -> PA06 (D10) */
+            3 0>;/* PAD3: MISO -> PA07 (D9) */
 
     trackball: trackball@0 {
         status = "okay";
