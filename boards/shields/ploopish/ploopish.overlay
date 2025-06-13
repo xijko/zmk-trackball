@@ -28,21 +28,19 @@
 };
 
 &pinctrl {
-    sercom0_default: sercom0_default {
-        group1 {
-            pinmux = <&xiao_d 8>,
-                    <&xiao_d 10>,
-                    <&xiao_d 9>
-            ;
-        };
-    };
+sercom0_spi_default: sercom0_spi_default {
+		group1 {
+			pinmux = <PA5D_SERCOM0_PAD1>,
+				 <PA6D_SERCOM0_PAD2>,
+				 <PA7D_SERCOM0_PAD3>;
+		};
+	};
 
     sercom0_sleep: sercom0_sleep {
         group1 {
-            pinmux = <&xiao_d 8>,
-                    <&xiao_d 10>,
-                    <&xiao_d 9>
-            ;
+			pinmux = <PA5D_SERCOM0_PAD1>,
+				 <PA6D_SERCOM0_PAD2>,
+				 <PA7D_SERCOM0_PAD3>;
             low-power-enable;
         };
     };
