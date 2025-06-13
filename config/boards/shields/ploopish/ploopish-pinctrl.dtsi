@@ -4,7 +4,6 @@
             pinmux = <0x00030004>,  /* PA04 - SERCOM0 PAD0 */
                      <0x00030005>,  /* PA05 - SERCOM0 PAD1 */
                      <0x00030006>;  /* PA06 - SERCOM0 PAD2 */
-            bias-disable;
         };
     };
 };
