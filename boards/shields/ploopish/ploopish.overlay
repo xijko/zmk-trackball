@@ -41,11 +41,9 @@
 
     sercom0_sleep: sercom0_sleep {
         group1 {
-            pinmux = <
-                0x201,
-                0x202,
-                0x203
-            >;
+			pinmux = <PA5D_SERCOM0_PAD1>,
+				 <PA6D_SERCOM0_PAD2>,
+				 <PA7D_SERCOM0_PAD3>;
             low-power-enable;
         };
     };
