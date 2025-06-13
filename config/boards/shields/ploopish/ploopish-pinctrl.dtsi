@@ -1,9 +1,9 @@
 &pinctrl {
     sercom0_spi_default: sercom0_spi_default {
         group1 {
-pinmux = <&xiao_spi MISO>,
-<&xiao_spi MOSI>,
-<&xiao_spi SCK>
+pinmux = <&xiao_spi 9>,
+<&xiao_spi 10>,
+<&xiao_spi 8>
         };
     };
 };
