@@ -1,5 +1,4 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your overlay
-#include <dt-bindings/pinctrl/samd21-pinctrl.h>
 
 / {
     physical_layout0: physical_layout_0 { // First physical layout, use different naming for other layouts
