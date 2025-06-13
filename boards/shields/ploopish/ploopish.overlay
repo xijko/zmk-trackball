@@ -27,44 +27,28 @@
     };
 };
 
-&pinctrl {
-    spi0_default: spi0_default {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
-                <NRF_PSEL(SPIM_MOSI, 1, 14)>,
-                <NRF_PSEL(SPIM_MISO, 1, 15)>;
-        };
-    };
+/* REMOVED: NRF-specific pinctrl block for Nordic chips */
 
-    spi0_sleep: spi0_sleep {
-        group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
-                <NRF_PSEL(SPIM_MOSI, 1, 14)>,
-                <NRF_PSEL(SPIM_MISO, 1, 15)>;
-            low-power-enable;
-        };
-    };
-};
-
-&spi0 {
+&sercom0 {
     status = "okay";
-    compatible = "nordic,nrf-spim";
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
-    pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
+    compatible = "atmel,samd21-spi";
+    cs-gpios = <&xiao_d 8 GPIO_ACTIVE_LOW>;  /* Update to your CS pin */
 
     trackball: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3360";
         reg = <0>;
         spi-max-frequency = <2000000>;
-
-        /*   optional features   */
-        // snipe-layers = <1>;
-        // scroll-layers = <2 3>;
-        // automouse-layer = <4>;
     };
+};
+
+&sercom0_default {
+    group1 {
+        /* Update pins based on wiring */
+         pinmux = <PINMUX_PA08D_SERCOM0_PAD0>,  /* SCK  -> D8 */
+                     <PINMUX_PA06D_SERCOM0_PAD2>,  /* MOSI -> D10 */
+                     <PINMUX_PA07D_SERCOM0_PAD3>;  /* MISO -> D9 */
+        };
 };
 
 / {
