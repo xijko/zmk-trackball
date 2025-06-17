@@ -37,7 +37,7 @@ kscan0: kscan0 {
   invert_y: zip_xy_transform_invert_y {
     compatible = "zmk,xy-transform";
     x = <1>;
-    y = <-1>;
+    y = <0xFFFFFFFF>;
   };
 };
 
