@@ -99,5 +99,10 @@ kscan0: kscan0 {
         input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)
     >;
+
+    scroller {
+        layers = <1>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+    };
   };
 };
