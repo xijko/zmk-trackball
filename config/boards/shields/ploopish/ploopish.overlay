@@ -1,18 +1,22 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your overlay
 
-/ {
-    physical_layout0: physical_layout_0 { // First physical layout, use different naming for other layouts
-        compatible = "zmk,physical-layout";
-        display-name = "Default Layout";
-        kscan = <&kscan0>; // Label of the kscan node, optional if all layouts use the same
-        transform = <&default_transform>; // Label of the matrix transform for this layout
-    };
+&physical_layout_0 { // First physical layout, use different naming for other layouts
+    compatible = "zmk,physical-layout";
+    display-name = "Default Layout";
+    transform = <&default_transform>; // Label of the matrix transform for this layout
 };
 
 / {
-    kscan0: kscan0 {
+    chosen {
+        zmk,kscan = &kscan0;
+        zmk,physical-layout = "physical_layout0";
+    };
+
+    default_transform: keymap_transform0 {
         label = "default";
         compatible = "zmk,kscan-gpio-matrix";
+        columns = <2>;
+        rows = <3>;
         diode-direction = "row2col";
         wakeup-source;
 
@@ -26,14 +30,13 @@
             = <&xiao_d 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
-    };
-};
 
-/ {
-    chosen {
-        zmk,kscan = &kscan0;
+        
+        map = <
+        RC(1,0) RC(0,0) RC(0,1) RC(1,1)
+        RC(2,0)                 RC(2,1)
+        >
     };
-};
 
 &pinctrl {
     spi0_default: spi0_default {
