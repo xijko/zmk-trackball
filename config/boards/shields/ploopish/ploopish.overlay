@@ -31,6 +31,7 @@
         RC(2,0)                 RC(2,1)
         >;
     };
+};
 
 &pinctrl {
     spi0_default: spi0_default {
