@@ -34,14 +34,6 @@ kscan0: kscan0 {
 };
 
 / {
-  invert_y: zip_xy_transform_invert_y {
-    compatible = "zmk,xy-transform";
-    x = <1>;
-    y = <0xFFFFFFFF>;
-  };
-};
-
-/ {
     physical_layout0: physical_layout_0 { // First physical layout, use different naming for other layouts
         compatible = "zmk,physical-layout";
         display-name = "Default Layout";
@@ -102,6 +94,8 @@ kscan0: kscan0 {
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-    input-processors = <&invert_y>;
+        input-processors = <
+        &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
+    >;
   };
 };
