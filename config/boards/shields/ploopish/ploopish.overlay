@@ -1,4 +1,6 @@
 #include <dt-bindings/zmk/matrix_transform.h> // Put this with the other includes at the top of your overlay
+#include <input/processors.dtsi>
+
 
 / {  
 kscan0: kscan0 {
@@ -92,6 +94,6 @@ kscan0: kscan0 {
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>;
   };
 };
