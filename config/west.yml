@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: trentrand
-      url-base: https://github.com/trentrand
+    - name: george-norton
+      url-base: https://github.com/george-norton
 
   projects:
     - name: zmk
@@ -11,8 +11,8 @@ manifest:
       revision: main
       import: app/west.yml
 
-    - name: zmk-pmw3360-driver
-      remote: trentrand
+    - name: zmk-driver-pmw3360
+      remote: george-norton
       revision: main
 
   self:
