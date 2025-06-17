@@ -19,5 +19,5 @@
 #
 ---
 include:
-  - board: seeeduino_xiao
+  - board: seeeduino_xiao_ble
     shield: ploopish
