@@ -102,7 +102,7 @@ kscan0: kscan0 {
 
     scroller {
         layers = <1>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
+        input-processors = <&zip_xy_to_scroll_mapper>, <&zip_scroll_scaler 1 5>;
     };
   };
 };
