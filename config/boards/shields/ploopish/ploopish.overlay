@@ -97,7 +97,7 @@ kscan0: kscan0 {
     compatible = "zmk,input-listener";
     device = <&trackball>;
         input-processors = <
-        &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT)
+        &zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)
     >;
   };
 };
