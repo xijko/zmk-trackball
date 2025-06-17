@@ -21,9 +21,9 @@
             // |     A     |                       |     B     |
 
             bindings = <
-&sl 1         &kp NUMBER_2
-&kp NUMBER_3  &kp NUMBER_4
-&mkp LCLK     &mkp RCLK
+&kp K_BACK  &tog 1
+&mkp MB3    &kp K_FORWARD
+&mkp LCLK   &mkp RCLK
             >;
         };
 
