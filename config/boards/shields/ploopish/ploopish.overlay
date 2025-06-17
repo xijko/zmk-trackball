@@ -26,6 +26,10 @@ kscan0: kscan0 {
         compatible = "zmk,matrix-transform";
         columns = <2>; // Length of the "col-gpios" array
         rows = <3>; // Length of the "row-gpios" array
+        map = <
+                RC(1,0) RC(0,0) RC(0,1) RC(1,1)
+                RC(2,0)                 RC(2,1)
+        >;
     };
 };
 
