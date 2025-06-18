@@ -36,7 +36,7 @@
 
             bindings = <
 &mkp MB4   &mkp MB5
-&kp LC(C)  &kp LC(V)
+&kp LC(C)  &mt LG(V) LC(V)
 &mkp LCLK  &right_click_middle_click
             >;
         };
