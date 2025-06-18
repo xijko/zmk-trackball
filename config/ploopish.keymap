@@ -16,6 +16,15 @@
         };
     };
 
+    behaviors {
+        scroll_wheel_behavior: scroll_wheel_behavior {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SCROLL_WHEEL_BEHAVIOR";
+            #binding-cells = <0>;
+            bindings = <&mo 1>, <&mkp MB3>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -31,7 +40,7 @@
             >;
         };
 
-        scroll_V {
+        scroll {
             bindings = <
 &trans  &trans
 &trans  &trans
