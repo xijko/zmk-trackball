@@ -91,20 +91,13 @@ kscan0: kscan0 {
         //automouse-layer = <4>;
     };
 };
-/ {
-        gesture_jiggle_processor: gesture_jiggle_processor {
-            compatible = "zmk,gesture-jiggle-processor";
-            #input-processor-cells = <0>;
-        };
-};
 
 / {
   trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
         input-processors =
-        <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
-        <&gesture_jiggle_processor>;
+        <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>;
 
     scroller {
         layers = <1>;
