@@ -21,3 +21,4 @@
 include:
   - board: seeeduino_xiao_ble
     shield: ploopish
+    snippet: zmk-usb-logging
