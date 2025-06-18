@@ -92,10 +92,10 @@ kscan0: kscan0 {
     };
 };
 / {
-    gesture_jiggle_processor: gesture_jiggle_processor {
-        compatible = "zmk,input-processor";
-        #input-processor-cells = <0>;
-    };
+        gesture_jiggle_processor: gesture_jiggle_processor {
+            compatible = "zmk,gesture-jiggle-processor";
+            #input-processor-cells = <0>;
+        };
 };
 
 / {
