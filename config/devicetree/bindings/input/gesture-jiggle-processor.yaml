@@ -1,8 +1,0 @@
-# gesture-jiggle-processor.yaml
-description: Gesture Jiggle Motion Processor
-
-compatible: "zmk,gesture-jiggle-processor"
-
-include: input-processor.yaml
-
-properties: {}
