@@ -20,8 +20,8 @@
             // |     A     |                       |     B     |
 
             bindings = <
-&mkp MB4   &tog 1
-&mkp MB3   &mkp MB5
+&sl 1      &mkp MB4
+&mkp MB5   &mkp MB3
 &mkp LCLK  &mkp RCLK
             >;
         };
